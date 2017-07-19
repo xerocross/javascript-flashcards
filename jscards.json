@@ -1,12 +1,74 @@
-[{"list":"Math","front":"What does Math.random() return?","back":"A pseudo-random number between 0 and 1, including 0 but excluding 1."},
-{"list":"Math","front":"How can you get a pseudo-random number in JavaScript?","back":"Use the Math.random() method, which returns x, where 0<=x<1."},
-{"list":"Math","front":"In JavaScript, what does `10/0` return?","back":"Infinity.  Note that JavaScript does not interpret this as an error."},
-{"list":"Math","front":"Is there any possible x in Javascript such that `x!=x` evaluates true?","back":"Yes.  If x is `NaN` (not-a-number)"},
-{"list":"Math","front":"In JavaScript, observe that if we run `x = .3-.2` and `y=.2-.1` then `x==y` evaluates false.  Why?  What's going on here?","back":"The problem is that numbers are represented in binary, and there is no way to represent 1/10 exactly in this scheme.  Therefore, `x==y` evaluates false because of a rounding error."},
-{"list":"Syntax","front":"What are the legal identifiers in JavaScript?","back":"Must begin with a letter, _ or $.  Subsequent characters may also be numerals.  "},
-{"list":"Types","front":"In JavaScript, what are the primitive types?","back":"numbers, strings, and booleans"},
-{"list":"Types","front":"In JavaScript, functions are of the type: _______","back":"object.  They are objects.  "},
-{"list":"Types","front":"JavaScript represents all numbers as ______","back":"64-bit floating point numbers"},
-{"list":"Types","front":"In JavaScript, what is the syntax for writing a hexadecimal literal?","back":"It must start with \"0x\".  For example: \"0xCAFE911\""},
-{"list":"Types","front":"In JavaScript, is the length of a string equal to the number of characters it contains?","back":"No always.  A string is an array of 16-bit values.  Most commonly used characters fit into 16 bits, but if a character does not, then it will take two (or more?) blocks.  Therefore, the length of a string could be 2 while the string only encodes 1 character."},
-{"list":"Types","front":"In JavaScript, what is the syntax of a RegExp literal?","back":"`/pattern/flags` such as, for example, `/[sS]/g`"}]
+[{
+   "keywords" : ["#JavaScript","#http_request"],
+   "type" : "fill_blank",
+   "version" : 0.1,
+   "generator" : "The object used for sending http requests in bare JavaScript is ??XMLHttpRequest??.  The relevant methods are ??open?? and ??send??."
+},
+{
+   "keywords" : ["#JavaScript"],
+   "type" : "fill_blank",
+   "version" : 0.1,
+   "generator" : "NPM is a ??package?? manager for the ??JavaScript?? language."
+},
+{
+   "keywords" : ["#JavaScript","#jQuery"],
+   "type" : "fill_blank",
+   "version" : 0.1,
+   "generator" : "In jQuery, you can add a class to an element using ??<code>$(element).addClass(class)</code>??."
+},
+{
+   "keywords" : ["#JavaScript"],
+   "type" : "fill_blank",
+   "version" : 0.1,
+   "generator" : "JavaScript's built-in method for making a string lower-case is ??<code>.toLowerCase()</code>?? and it returns ??a new string??."
+},
+{
+   "keywords" : ["#JavaScript","#web_worker"],
+   "type" : "custom",
+   "version" : 0.1,
+   "front_side" : "In JavaScript, how does a main script send a message to a web worker it has created?",
+   "back_side" : "<code>worker.postMessage(message)</code>"
+},
+{
+   "keywords" : ["#JavaScript","#web_worker"],
+   "type" : "custom",
+   "version" : 0.1,
+   "front_side" : "How can a web worker load an external JavaScript file?",
+   "back_side" : "There is a top-level <code>importScripts</code> method, which is called like <code>importScripts('filename.js')</code>"
+},
+{
+   "keywords" : ["#JavaScript","#web_worker"],
+   "type" : "custom",
+   "version" : 0.1,
+   "front_side" : "In JavaScript, how do you tell a web worker to listen for incoming messages?",
+   "back_side" : "There is a top-level <code>addEventListener</code> method one can call as <code>addEventListener('message',\n listener, false)</code>"
+},
+{
+   "keywords" : ["#JavaScript","#web_worker"],
+   "type" : "custom",
+   "version" : 0.1,
+   "front_side" : "In JavaScript, say you have a web worker defined named <code>worker</code>.  How do you listen for messages from it and act on them?  How does a listener function get the message?",
+   "back_side" : "<code>worker.addEventListener('message', listener,false)</code>  The listener function's first argument is an event object <code>e</code> with the message contained in e.data."
+},
+{
+   "keywords" : ["#JavaScript","#web_worker"],
+   "type" : "custom",
+   "version" : 0.1,
+   "front_side" : "In JavaScript, how do you create a new web worker?",
+   "back_side" : "Define the code in some external file, worker.js, and then in the main script create the worker by calling <code>new Worker('worker.js')</code>."
+},
+{
+   "keywords" : ["#JavaScript","#CSS"],
+   "type" : "custom",
+   "version" : 0.1,
+   "front_side" : "How do you search the DOM for elements with a particular attribute using bare JavaScript?",
+   "back_side" : "Use the method <code>_element_ .querySelectorAll('[some-attr]')</code>.  It returns a nodelist."
+},
+{
+   "keywords" : ["#JavaScript"],
+   "type" : "custom",
+   "version" : 0.1,
+   "front_side" : "Prototypal inheritance in JavaScript makes objects and their prototype objects into what kind of data structure?",
+   "back_side" : "It's a linked list. The prototype is a reference to another object which itself has a prototype, etc. "
+}
+]
